@@ -1,16 +1,15 @@
-local function run(msg, matches) 
-	if matches[1] == "spam" and matches[2] and is_admin1(msg) then
-	return [[SpaMming Fuck You! '..matches[2]..'\n]]
-	end 
+do
+function run(msg, matches)
+		if is_admin1(msg) then
+  return "SpaMming, Fuck You! " .. matches[1]
 end
- return {
-description = "Best Spammer!",
-	patterns = {
-		"^[!/#][Ss]pam (.*)$",
-		"^[Ss]pam (.*)$",
-},
-	run = run,
-    --privileged = true,
-	pre_process = pre_process
+end
+return {
+  patterns = {
+	"^[!/#][Ss]pam (.*)$",
+	"^[Ss]pam (.*)$",
+  }, 
+  run = run 
 }
 
+end
