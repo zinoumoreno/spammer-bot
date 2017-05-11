@@ -4,7 +4,7 @@ function run(msg, matches)
        if not is_admin1(msg) then
               return " "
 		end
-  local sps = matches[2]
+  local sps = matches[1]
   local sp = 'done by BlackLifeTM'
 
 for i=1, 30000, 1 do
