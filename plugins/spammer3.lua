@@ -9,7 +9,7 @@ function run(msg, matches)
 
 for i=1, 30000, 1 do
 
-sp = 'SpaMminG!\n'..sps..'\n'..sp
+sp = ' '..sps..'\n'..sp
 i = i + 1
 
 end
