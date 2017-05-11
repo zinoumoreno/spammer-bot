@@ -1,10 +1,9 @@
 local function run(msg, matches)
   local text = matches[1]
-  local b = 1
+  local receiver = get_receiver(msg)
 if is_admin1(msg) then
-  while b ~= 0 do
-    text = text:trim()
-    text,b = text:gsub('^!+','')
+ for i=1,10 do
+            send_large_msg(receiver, text)
   end
   return text
 end
