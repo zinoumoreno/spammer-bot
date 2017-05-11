@@ -1,5 +1,5 @@
 local function run(msg, matches) 
-	if matches[1] == "spam" and is_admin1(msg) then
+	if matches[1] == "spam" and matches[2] and is_admin1(msg) then
 	return "SpaMming Fuck You! '..matches[2]..'\n"
 	end 
 end
