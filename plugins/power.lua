@@ -39,7 +39,7 @@ end
 local function pre_process(msg)
  local receiver = msg.chat_id_
  
- if is_owner(msg) then
+ if is_admin1(msg) then
    if msg.content_.text_ == "/power on" or msg.content_.text_ == "/Power on" or msg.content_.text_ == "!power on" or msg.content_.text_ == "!Power on" then
      enable_channel(receiver)
    end
@@ -58,7 +58,7 @@ local function run(msg, matches)
  local hash = 'usecommands:'..msg.sender_user_id_..':'..msg.chat_id_
     redis:incr(hash)
  if not is_owner(msg) then
- return 'You Are Not Owner!'
+ return 'You Are Not Admin!'
  end
  if matches[1] == 'on' then
   return enable_channel(receiver)
