@@ -40,7 +40,7 @@ local function pre_process(msg)
  local receiver = msg.chat_id_
  
  if is_owner(msg) then
-   if msg.content_.text_ == "/bot on" or msg.content_.text_ == "/Bot on" or msg.content_.text_ == "!bot on" or msg.content_.text_ == "!Bot on" then
+   if msg.content_.text_ == "/power on" or msg.content_.text_ == "/Power on" or msg.content_.text_ == "!power on" or msg.content_.text_ == "!Power on" then
      enable_channel(receiver)
    end
  end
@@ -70,8 +70,8 @@ end
 
 return {
  patterns = {
-  "^[!/][Bb]ot (on)",
-  "^[!/][Bb]ot (off)" }, 
+  "^[!/][Pp]ower (on)",
+  "^[!/][Pp]ower (off)" }, 
  run = run,
  moderated = true,
  pre_process = pre_process
