@@ -5,7 +5,7 @@ function run(msg, matches)
       local url , res = http.request('http://api.blacklife-team.ir/time/')
 
       local jdat = json:decode(url)
-      local url = "http://2wap.org/usf/text_sm_gen/sm_gen.php?text="..jdat.ENtime
+      local url = "http://2wap.org/usf/text_sm_gen/sm_gen.php?text="..jdat.time
        local  file = download_to_file(url,'emoji.webp') 
          send_document(get_receiver(msg), file, ok_cb, false) 
 
