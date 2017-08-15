@@ -1,10 +1,12 @@
 function run(msg, matches)
 local url , res = http.request('http://api.blacklife-team.ir/time/')
-if res ~= 200 then return "No connection" end
+if res ~= 200 return "No connection" end
+if matches[1] == 'time' then
 local jdat = json:decode(url)
 local text = 'Time | ساعت : '..jdat.result.time..'\nDate | تاریخ : '..jdat.result.date..'\n@BlacklifeTM'
 return text
 end
+  end
 local time1 = jdat.result.time
 if time1 == 01:20:00 then
 local sudo = 255317894
